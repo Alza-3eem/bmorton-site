@@ -18,17 +18,7 @@ html, body {
     margin: 0;
 }
 
-.container1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3.75fr;
-    height: 100vh;
-    width: 100vw;
-}
-
 .header {
-    grid-row: 1 / 2;
-    grid-column: 1 / 3;
     background-color: var(--lt-pink);
     display: grid;
     grid-template-rows: 0.75fr 5.25fr 3.5fr 0.1fr;
@@ -74,18 +64,37 @@ html, body {
     font-size: 16px;
 }
 
+.nav-bar>li>a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar>li>a:hover {
+    text-decoration: underline;
+    color: rgb(109, 109, 109);
+    cursor: pointer;
+}
+
+.container1 {
+    display: grid;
+    height: 81vh;
+    width: 100%;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
 .main-left {
     background-image: url("https://static.wixstatic.com/media/1b94fd_b8c40b65951a49379e282a1e08f3b6fd~mv2.jpg/v1/fill/w_1440,h_1320,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/1b94fd_b8c40b65951a49379e282a1e08f3b6fd~mv2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
     grid-column: 1 / 2;
 }
 
 .main-right {
     background-color: var(--off-wht);
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
     grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
@@ -313,6 +322,23 @@ html, body {
 .no-scroll {
     overflow: hidden;
 }
+/*
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+*/
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
@@ -322,5 +348,43 @@ html, body {
 
     .hamburger {
         display: block;
+    }
+
+    .container1,
+    .container2 {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        height: 180vh; /* Each container takes full height */
+    }
+
+    .main-left,
+    .main-right,
+    .main2-left,
+    .main2-right {
+        height: 90vh; /* Each element within the container takes half height */
+        grid-row: auto; /* Ensures they stack vertically */
+        grid-column: 1 / 2; /* Span full width */
+    }
+
+    .quote,
+    .description2 {
+        height: 80vh; /* Each section takes full height */
+        width: 100vw; /* Full width of the viewport */
+    }
+
+    .description {
+        height: 100vh;
+        width: 100vw;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .description2>h1 {
+        font-size: 32px;
+    }
+
+    .quote {
+        font-size: 24px;
     }
 }
