@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const pageContent = document.querySelector('.page-content');
     const navLinks = document.querySelectorAll('a');
 
+    pageContent.classList.add('fade-in');
+    setTimeout(() => {
+        pageContent.classList.add('show');
+    }, 100);
+
     hamburger.addEventListener('click', function() {
         overlay.style.display = 'flex';
         body.classList.add('no-scroll')
@@ -21,12 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
+            pageContent.classList.remove('show')
             pageContent.classList.add('fade-out');
             setTimeout(() => {
                 window.location.href = this.href;
             }, 500);
         });
     });
-
-    pageContent.classList.add('fade-in');
 })

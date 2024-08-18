@@ -1,0 +1,11 @@
+.top-div {
+    background: 3.5;
+    text-align: center;
+    font-family: 'Marcellus', serif;
+    font-size: 3.5rem;
+}
+
+.top-header {
+    font-size: 2rem;
+    margin-top: 24px;;
+}

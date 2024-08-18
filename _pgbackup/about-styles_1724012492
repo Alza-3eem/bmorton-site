@@ -1,0 +1,6 @@
+.top-div {
+    background: #c9d5f5;
+    text-align: center;
+    font-family: 'Marcellus', serif;
+    font-size: 3.5rem;
+}

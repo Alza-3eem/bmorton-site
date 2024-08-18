@@ -13,8 +13,7 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     height: 100%;
     margin: 0;
 }
@@ -156,7 +155,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    right: 0px;
 }
 
 .container2 {
@@ -227,7 +225,7 @@ body {
 .description2>p {
     font-size: 1rem;
     line-height: 3.3;
-    font-weight: 300;
+    font-weight: 300;   
 }
 
 .description2>h1 {
@@ -325,6 +323,8 @@ body {
     overflow: hidden;
 }
 
+/*
+
 .fade-out {
     opacity: 0;
     transition: opacity 0.5s ease-out;
@@ -338,6 +338,8 @@ body {
 .fade-in.show {
     opacity: 1;
 }
+
+*/
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
@@ -354,34 +356,22 @@ body {
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
-        height: 180vh;
-
-        /* Each container takes full height */
+        height: 180vh; /* Each container takes full height */
     }
 
     .main-left,
     .main-right,
     .main2-left,
     .main2-right {
-        height: 90vh;
-
-        /* Each element within the container takes half height */
-        grid-row: auto;
-
-        /* Ensures they stack vertically */
-        grid-column: 1 / 2;
-
-        /* Span full width */
+        height: 90vh; /* Each element within the container takes half height */
+        grid-row: auto; /* Ensures they stack vertically */
+        grid-column: 1 / 2; /* Span full width */
     }
 
     .quote,
     .description2 {
-        height: 80vh;
-
-        /* Each section takes full height */
-        width: 100vw;
-
-        /* Full width of the viewport */
+        height: 80vh; /* Each section takes full height */
+        width: 100vw; /* Full width of the viewport */
     }
 
     .description {
