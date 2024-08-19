@@ -19,12 +19,13 @@ body {
     margin: 0;
 }
 
-.header {
+.my-header {
     background-color: var(--lt-pink);
     display: grid;
     grid-template-rows: 0.75fr 5.25fr 3.5fr 0.1fr;
     grid-template-columns: 1fr 3.75fr 1fr;
     text-align: center;
+    padding-bottom: 16px;
 }
 
 .border-div {
@@ -49,7 +50,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.nav-bar {
+.my-nav-bar {
     grid-row: 3 / 4;
     grid-column: 1 / 4;
     display: flex;
@@ -65,12 +66,12 @@ body {
     font-size: 1rem;
 }
 
-.nav-bar>li>a {
+.my-nav-bar>li>a {
     text-decoration: none;
     color: black;
 }
 
-.nav-bar>li>a:hover {
+.my-nav-bar>li>a:hover {
     text-decoration: underline;
     color: rgb(109, 109, 109);
     cursor: pointer;

@@ -1,0 +1,36 @@
+.page-content {
+    padding-top: 16px;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-bottom: 32px;
+    background-color: #e3dfee;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 32px;
+}
+
+.my-header{
+    height: 192px;
+}
+
+.contact-info>h1 {
+    font-family: 'Marcellus', serif;
+    font-size: 2rem;
+    color: black;
+    padding-bottom: 24px;
+    padding-top: 56px;
+    text-align: right;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info>img {
+    max-width: 40%;
+    border-radius: 15px;
+}
