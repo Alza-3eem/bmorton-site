@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             const result = await response.json();
-            if (result.success) {
+
+            // Check for a success message in the response
+            if (response.ok && result.message === 'Message sent successfully!') {
                 alert('Message sent successfully!');
                 form.reset(); // Clear the form after successful submission
             } else {
