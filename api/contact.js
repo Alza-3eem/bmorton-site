@@ -23,14 +23,18 @@ export default async function handler(req, res) {
 
         try {
             console.log('Sending email with options:', mailOptions); // Log mail options
-            await transporter.sendMail(mailOptions);
-            console.log('Email sent successfully'); // Log success
+            const info = await transporter.sendMail(mailOptions);
+            console.log('Email sent successfully:', info.response); // Log success response
+
+            // Ensure a successful status code and message is sent
             res.status(200).json({ message: 'Message sent successfully!' });
         } catch (error) {
             console.error('Error sending email:', error); // Log detailed error
-            res.status(500).json({ message: 'Failed to send message.' });
+            // Send a response indicating failure
+            res.status(500).json({ message: 'Failed to send message.', error: error.message });
         }
     } else {
+        // Handle non-POST requests
         res.status(405).json({ message: 'Method not allowed' });
     }
 }
