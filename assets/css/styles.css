@@ -25,7 +25,6 @@ body {
     grid-template-rows: 0.75fr 5.25fr 3.5fr 0.1fr;
     grid-template-columns: 1fr 3.75fr 1fr;
     text-align: center;
-    padding-bottom: 16px;
 }
 
 .border-div {

@@ -1,11 +1,11 @@
 .page-content {
     padding-top: 16px;
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: 25%;
+    padding-right: 25%;
     padding-bottom: 32px;
     background-color: #e3dfee;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     gap: 32px;
 }
@@ -16,11 +16,12 @@
 
 .contact-info>h1 {
     font-family: 'Marcellus', serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: black;
     padding-bottom: 24px;
-    padding-top: 56px;
+    padding-top: 32px;
     text-align: right;
+    margin-bottom: 24px;
 }
 
 .contact-info {
@@ -30,7 +31,42 @@
     align-items: center;
 }
 
-.contact-info>img {
-    max-width: 40%;
+.container-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.image {
     border-radius: 15px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: 64px;
+}
+
+.contact-text {
+    font-family: 'Lato', serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: black;
+    background-color: #fae9e6;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    box-shadow: 10px 10px 22px -25px rgba(0,0,0,0.45),
+    0px 25px 20px -20px rgba(0,0,0,0.45);
+    padding: 24px;
+}
+
+form {
+    font-family: 'Marcellus', serif;
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
 }
