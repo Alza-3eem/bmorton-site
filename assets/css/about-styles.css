@@ -26,3 +26,10 @@ p {
 .page-content {
     display: grid;
 }
+
+@media (max-width: 768px) {
+    p {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+}
