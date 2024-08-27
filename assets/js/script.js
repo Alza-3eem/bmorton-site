@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const closebtn = document.querySelector('.closebtn');
     const body = document.querySelector('body');
     const pageContent = document.querySelector('.page-content');
-    const navLinks = document.querySelectorAll('a');
+    const navLinks = document.querySelectorAll('.nav-links');
 
     pageContent.classList.add('fade-in');
     setTimeout(() => {
